@@ -6,37 +6,102 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion, AnimatePresence } from "framer-motion";
 
-// ... (heroSlides data is unchanged)
+// --- SLIDES DATA ---
 const heroSlides = [
   {
     superTitle: "Turnkey Excellence",
     title: "Kaushal Bhawan",
     description: "A landmark government building defined by modern architecture and functional design.",
-    imgSrc: "public/Singh_FurnCraft_Portfolio/KAUSHAL BHAWAN/Pasted image.png", // The exterior shot
+    imgSrc: "/Singh_FurnCraft_Portfolio/KAUSHAL BHAWAN/Pasted image.png",
   },
   {
     superTitle: "Corporate Interiors",
     title: "Modern Workspaces",
     description: "Dynamic office environments designed for productivity and collaboration.",
-    imgSrc: "public/Singh_FurnCraft_Portfolio/HYDRO OFFICE AT POLYPLEX CORPORATION LIMITED/Pasted image.png", // The yellow office
+    imgSrc: "/Singh_FurnCraft_Portfolio/HYDRO OFFICE AT POLYPLEX CORPORATION LIMITED/Pasted image.png",
   },
   {
     superTitle: "Bespoke Solutions",
     title: "IILM Auditorium",
     description: "Acoustically engineered and aesthetically designed for an immersive experience.",
-    imgSrc: "public/Singh_FurnCraft_Portfolio/IILM AUDITORIUM/Pasted image (3).png", // The purple seats
+    imgSrc: "/Singh_FurnCraft_Portfolio/IILM AUDITORIUM/Pasted image (3).png",
   },
   {
     superTitle: "Precision Engineering",
     title: "Executive Boardrooms",
     description: "State-of-the-art facilities that blend technology with sophisticated design.",
-    imgSrc: "public/Singh_FurnCraft_Portfolio/NATIONAL HIGHWAYS INFRA TRUST/Pasted image (5).png", // The long conference room
+    imgSrc: "/Singh_FurnCraft_Portfolio/NATIONAL HIGHWAYS INFRA TRUST/Pasted image (5).png",
   },
 ];
 
+// --- LOGO DATA ---
+const logos = [
+  { src: "/Brand_Collabs_logo/AAI Logo.png", alt: "AAI Logo" },
+  { src: "/Brand_Collabs_logo/AIPL-LOGO.webp", alt: "AIPL-LOGO" },
+  { src: "/Brand_Collabs_logo/AMRITA LOGO.avif", alt: "AMRITA LOGO" },
+  { src: "/Brand_Collabs_logo/Axis-Bank-Logo.png", alt: "Axis-Bank-Logo" },
+  { src: "/Brand_Collabs_logo/Chawla ALuminium Logo.png", alt: "Chawla ALuminium Logo" },
+  { src: "/Brand_Collabs_logo/ELI_logo.svg", alt: "ELI_logo" },
+  { src: "/Brand_Collabs_logo/GTS_Logo.png", alt: "GTS_Logo" },
+  { src: "/Brand_Collabs_logo/IILM_LOGO.png", alt: "IILM_LOGO" },
+  { src: "/Brand_Collabs_logo/Indian_AirForce.png", alt: "Indian_AirForce" },
+  { src: "/Brand_Collabs_logo/Indian_satyamev_logo.png", alt: "Indian_satyamev_logo" },
+  { src: "/Brand_Collabs_logo/Iskconlogo.png", alt: "Iskconlogo" },
+  { src: "/Brand_Collabs_logo/MECON_logo.png", alt: "MECON_logo" },
+  { src: "/Brand_Collabs_logo/MMTC logo.gif", alt: "MMTC logo" },
+  { src: "/Brand_Collabs_logo/MOVIETIME CINEMAS.svg", alt: "MOVIETIME CINEMAS" },
+  { src: "/Brand_Collabs_logo/Ministry_of_Steel.gif", alt: "Ministry_of_Steel" },
+  { src: "/Brand_Collabs_logo/NHIT-logo-with-TM-01.png", alt: "NHIT-logo-with-TM-01" },
+  { src: "/Brand_Collabs_logo/Pizza_Express.svg", alt: "Pizza_Express" },
+  { src: "/Brand_Collabs_logo/Reliance_Communications_Logo.svg.png", alt: "Reliance_Communications_Logo" },
+  { src: "/Brand_Collabs_logo/SBI Logo.png", alt: "SBI Logo" },
+  { src: "/Brand_Collabs_logo/Sail Logo.png", alt: "Sail Logo" },
+  { src: "/Brand_Collabs_logo/Vedanta-BALCO-Logo2.png", alt: "Vedanta-BALCO-Logo2" },
+  { src: "/Brand_Collabs_logo/Vi-logo.svg", alt: "Vi-logo" },
+  { src: "/Brand_Collabs_logo/ZTE-logo.svg", alt: "ZTE-logo" },
+  { src: "/Brand_Collabs_logo/agilent-logo.png", alt: "agilent-logo" },
+  { src: "/Brand_Collabs_logo/colour-logo-png-01.png", alt: "colour-logo-png-01" },
+  { src: "/Brand_Collabs_logo/imfa-logo.ce2aef33.svg", alt: "imfa-logo" },
+  { src: "/Brand_Collabs_logo/innovaccer-logo.svg", alt: "innovaccer-logo" },
+  { src: "/Brand_Collabs_logo/integreon-logo03.png", alt: "integreon-logo03" },
+  { src: "/Brand_Collabs_logo/m3m-logo.png", alt: "m3m-logo" },
+  { src: "/Brand_Collabs_logo/nalco-logo.png", alt: "nalco-logo" },
+  { src: "/Brand_Collabs_logo/polyplex-logo.jpg", alt: "polyplex-logo" },
+  { src: "/Brand_Collabs_logo/tata_logo.webp", alt: "tata_logo" },
+  { src: "/Brand_Collabs_logo/wipro_new_logo.svg", alt: "wipro_new_logo" },
+];
 
+// --- LOGO SCROLLER COMPONENT ---
+const LogoScroller = () => (
+  <div
+    className="w-full overflow-hidden"
+    style={{
+      maskImage: "linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)",
+      WebkitMaskImage: "linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%)",
+    }}
+  >
+    <div className="flex w-max animate-logo-scroll">
+      {[...logos, ...logos].map((logo, index) => (
+        <div 
+          key={index} 
+          className="flex-shrink-0 w-36 h-24 flex items-center justify-center mx-6"
+        >
+          {/* --- THIS IS THE FIX --- */}
+          {/* Removed 'grayscale' and 'hover:grayscale-0' */}
+          <img 
+            src={logo.src} 
+            alt={logo.alt} 
+            className="max-w-full max-h-full object-contain opacity-60 transition-all duration-300 hover:opacity-100" 
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+
+// --- HERO SECTION COMPONENT ---
 export const HeroSection = () => {
-  // ... (all your hooks and functions are unchanged)
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: false }),
   ]);
@@ -57,13 +122,10 @@ export const HeroSection = () => {
 
 
   return (
-    // --- THIS IS THE FIX ---
-    // Added 'bg-background' to make the slider card opaque
     <section className="relative h-[600px] md:h-[700px] lg:h-[800px] w-full overflow-hidden rounded-[2.75rem] border border-border/60 shadow-soft bg-background">
       
       {/* Embla Slider Viewport */}
       <div className="overflow-hidden h-full" ref={emblaRef}>
-        {/* ... (rest of the file is unchanged) ... */}
         <div className="flex h-full">
           {heroSlides.map((slide) => (
             <div
@@ -83,7 +145,6 @@ export const HeroSection = () => {
 
       {/* Text Content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-8">
-        {/* ... (text content is unchanged) ... */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -114,7 +175,6 @@ export const HeroSection = () => {
 
       {/* Slider Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-        {/* ... (dots are unchanged) ... */}
         {heroSlides.map((_, index) => (
           <button
             key={index}
@@ -128,13 +188,12 @@ export const HeroSection = () => {
       </div>
 
       {/* Logo Scroller */}
-      {/* Changed bg-gradient-to-t... to a solid bg-background/90 for better readability */}
       <div className="absolute bottom-0 w-full bg-background/90 py-8">
         <h3 className="text-center text-sm font-semibold uppercase tracking-[0.4em] text-muted-foreground">
           Trusted By
         </h3>
         <div className="mt-8">
-          <p className="text-center text-muted-foreground/50 text-xs">Logo Scroller Component Goes Here</p>
+          <LogoScroller />
         </div>
       </div>
     </section>

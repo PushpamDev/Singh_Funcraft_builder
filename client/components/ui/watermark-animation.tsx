@@ -20,7 +20,7 @@ const images = [
     "/Singh_FurnCraft_Portfolio/HYDRO OFFICE AT POLYPLEX CORPORATION LIMITED/Pasted image.png",
     "/Singh_FurnCraft_Portfolio/IILM AUDITORIUM/Pasted image (2).png",
     "/Singh_FurnCraft_Portfolio/IILM AUDITORIUM/Pasted image (3).png",
-    "/Singh_FurnCraft_Portfolio/IILM AUDITORIUM/Pasted image.png",
+    // "/Singh_FurnCraft_Portfolio/IILM AUDITORIUM/Pasted image.png",
     "/Singh_FurnCraft_Portfolio/IMFA/Pasted image (2).png",
     "/Singh_FurnCraft_Portfolio/IMFA/Pasted image (3).png",
     "/Singh_FurnCraft_Portfolio/IMFA/Pasted image (4).png",

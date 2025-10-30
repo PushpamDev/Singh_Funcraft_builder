@@ -94,18 +94,23 @@ export default {
             height: "0",
           },
         },
-        // --- ADDED THIS ---
         "embla-fade-in": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        // --- ADDED THIS ---
+        "logo-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         // ------------------
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        // --- ADDED THIS ---
         "embla-fade-in": "embla-fade-in 1s ease-in-out forwards",
+        // --- ADDED THIS ---
+        "logo-scroll": "logo-scroll 40s linear infinite",
         // ------------------
       },
     },

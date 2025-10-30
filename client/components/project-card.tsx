@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "react-router-dom"; // Use Next.js link for speed
+import { Link } from "react-router-dom"; // <-- 1. IMPORT from react-router-dom
 import { motion } from "framer-motion";
 import { Project } from "@/lib/projects";
 
@@ -10,7 +10,12 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <Link href={`/projects/${project.slug}`} className="group block overflow-hidden rounded-3xl shadow-card">
+    // --- 2. THE FIX ---
+    // Changed 'href' prop to 'to'
+    <Link 
+      to={`/projects/${project.slug}`} 
+      className="group block overflow-hidden rounded-3xl shadow-card"
+    >
       <motion.div
         className="relative h-96 w-full"
         whileHover="hover"

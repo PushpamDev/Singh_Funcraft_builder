@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Head from "react-helmet";
 import { CheckCircle } from "lucide-react";
-import { motion } from "framer-motion"; // <-- 1. IMPORT MOTION
+import { motion } from "framer-motion";
 
 // --- Data for the sections ---
 const turnkeyScope = [
@@ -87,20 +87,25 @@ const Services = () => (
       <section className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* Image (Animate from Left) */}
+          {/* Video (Animate from Left) */}
           <motion.div
             variants={fromLeft}
             initial="initial"
             whileInView="inView"
             viewport={{ once: true, amount: 0.3 }}
             transition={animationTransition}
-            className="h-[500px] w-full overflow-hidden rounded-[2.5rem] border border-border/60 shadow-card"
+            className="h-[500px] w-full overflow-hidden rounded-[2.5rem] border border-border/60 shadow-card bg-black"
           >
-            <img 
-              src="/Singh_FurnCraft_Portfolio/AAI JORBAGH/Pasted image (3).png"
-              alt="Turnkey Interior Solutions"
+            <video
+              src="/Singh_FurnCraft_Portfolio/BACKGROUND VIDEO/Luxury_Interior_Visualization_Video_Generation.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-full object-cover"
-            />
+            >
+              Your browser does not support the video tag.
+            </video>
           </motion.div>
           
           {/* Text (Animate from Right) */}
@@ -166,21 +171,30 @@ const Services = () => (
             </ul>
           </motion.div>
           
-          {/* Image (Animate from Right) */}
+          {/* --- THIS IS THE CHANGE --- */}
+          {/* Video (Animate from Right) */}
           <motion.div
             variants={fromRight}
             initial="initial"
             whileInView="inView"
             viewport={{ once: true, amount: 0.3 }}
             transition={animationTransition}
-            className="h-[500px] w-full overflow-hidden rounded-[2.5rem] border border-border/60 shadow-card lg:order-first"
+            className="h-[500px] w-full overflow-hidden rounded-[2.5rem] border border-border/60 shadow-card lg:order-first bg-black"
           >
-            <img 
-              src="/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (4).png"
-              alt="General Contracting"
+            <video
+              // This path is relative to your 'public' folder
+              src="/Singh_FurnCraft_Portfolio/BACKGROUND VIDEO/Construction_Excellence_Video_Generation.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-full object-cover"
-            />
+            >
+              Your browser does not support the video tag.
+            </video>
           </motion.div>
+          {/* --- END OF CHANGE --- */}
+
         </div>
       </section>
 
@@ -241,7 +255,8 @@ const Services = () => (
         viewport={{ once: true, amount: 0.3 }}
         transition={animationTransition}
       >
-        <div className="rounded-[2.5rem] border border-border/60 bg-secondary/40 p-10 shadow-card lg:p-16 text-center">
+        {/* Changed bg-secondary/40 to bg-secondary for opacity */}
+        <div className="rounded-[2.5rem] border border-border/60 bg-secondary p-10 shadow-card lg:p-16 text-center">
           <h2 className="font-display text-3xl leading-tight text-foreground md:text-5xl">
             Let’s Build Your Dream Space Together
           </h2>
