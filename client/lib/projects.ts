@@ -471,9 +471,9 @@ export const projects: Project[] = [
     type: "Café Interior",
     description: "Boutique café interior with wood finishes, glass partitions, and cozy ambiance.",
     images: [
-        "/Singh_FurnCraft_Portfolio/THE COFFEE BEAN & TEA LEAF/Screenshot 2025-10-30 at 5.50.54 PM.png",
-        "/Singh_FurnCraft_Portfolio/THE COFFEE BEAN & TEA LEAF/Screenshot 2025-10-30 at 5.51.12 PM.png",
-        "/Singh_FurnCraft_Portfolio/THE COFFEE BEAN & TEA LEAF/Screenshot 2025-10-30 at 5.51.30 PM.png"
+        "/Singh_FurnCraft_Portfolio/THE COFFEE BEAN & TEA LEAF/TCB1.png",
+        "/Singh_FurnCraft_Portfolio/THE COFFEE BEAN & TEA LEAF/TCB1.png",
+        "/Singh_FurnCraft_Portfolio/THE COFFEE BEAN & TEA LEAF/TCB3.png"
     ],
     client: "The Coffee Bean & Tea Leaf",
     challenge: defaultChallenge,
@@ -489,8 +489,8 @@ export const projects: Project[] = [
     type: "Broadcast/Media Office",
     description: "News media office space — broadcast-ready interiors, acoustics, and branding-focused design.",
     images: [
-        "/Singh_FurnCraft_Portfolio/TIMES NOW/Screenshot 2025-10-30 at 5.47.06 PM.png",
-        "/Singh_FurnCraft_Portfolio/TIMES NOW/Screenshot 2025-10-30 at 5.47.26 PM.png"
+        "/Singh_FurnCraft_Portfolio/TIMES NOW/TN1.png",
+        "/Singh_FurnCraft_Portfolio/TIMES NOW/TN2.png"
     ],
     client: "Times Now",
     challenge: defaultChallenge,
