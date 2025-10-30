@@ -24,7 +24,7 @@ export const VideoBackground = () => (
       muted
       playsInline
       initial={{ opacity: 0 }}
-      animate={{ opacity: 0.50 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 2, ease: "easeOut" }}
       style={{
         width: "100%",
