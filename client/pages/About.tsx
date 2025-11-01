@@ -259,7 +259,7 @@ const About = () => (
             className="h-[500px] w-full overflow-hidden rounded-[2.5rem] border border-border/60 shadow-card"
           >
             <img 
-              src="/Singh_FurnCraft_Portfolio/MR PP SINGH/image-Picsart-AiImageEnhancer.png"
+              src="/Singh_FurnCraft_Portfolio/MR PP SINGH/image-Picsart-AiImageEnhancer.jpeg"
               alt="Executive Office Interior"
               className="w-full h-full object-cover"
             />
