@@ -15,7 +15,8 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
-import { ScrollToTop } from "@/components/layout/ScrollToTop"; // <-- 1. IMPORT IT
+import Vision from "./pages/Vision"; // <-- 1. IMPORT IT
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -31,12 +32,13 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop /> {/* <-- 2. ADD IT HERE */}
+        <ScrollToTop />
         <Routes>
           <Route element={<LayoutRoute />}>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/vision" element={<Vision />} /> {/* <-- 2. ADD IT HERE */}
             
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />

@@ -3,12 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 import { WatermarkAnimation } from "../ui/watermark-animation";
-import { VideoBackground } from "../ui/video-background"; // <-- 1. IMPORT VIDEO BG
+import { VideoBackground } from "../ui/video-background";
 import { Footer } from "./footer";
 
+// --- 1. ADDED 'OUR VISION' LINK ---
 const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Our Vision", href: "/vision" },
   { label: "Projects", href: "/projects" },
   // { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
@@ -29,11 +31,11 @@ const MobileMenu = ({
       isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
     )}
   >
-    {/* ... (Mobile menu code is unchanged) ... */}
     <div className="flex h-full flex-col items-center justify-center gap-8 px-6 text-center">
       <img src="/favicon-32x32.png" alt="Singh FurnCraft" className="h-8 w-auto" />
       <p className="font-display text-3xl text-foreground">Singh FurnCraft</p>
       <nav className="flex flex-col items-center gap-6 text-lg font-medium">
+        {/* This will now automatically include the new link */}
         {NAV_LINKS.map((link) => (
           <Link
             key={link.href}
@@ -70,23 +72,21 @@ export const SiteLayout = ({ children }: PropsWithChildren) => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   
-  // --- 2. ADD THIS LOGIC ---
   const isHomepage = location.pathname === '/';
 
   return (
     <div className="relative flex min-h-screen flex-col">
       
-      {/* --- 3. ADD THIS CONDITIONAL LOGIC --- */}
       {isHomepage ? <VideoBackground /> : <WatermarkAnimation />}
       
       <header className="sticky top-0 z-30 backdrop-blur-xl">
-        {/* ... (Header code is unchanged) ... */}
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-6 py-6">
           <Link to="/" className="relative flex items-center gap-4">
             <img src="/favicon-32x32.png" alt="Singh FurnCraft" className="h-8 w-auto" />
             <span className="font-display text-2xl tracking-tight text-foreground">Singh FurnCraft</span>
             <span className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-border to-transparent" />
           </Link>
+          {/* This will now automatically include the new link */}
           <nav className="hidden items-center gap-8 text-sm font-semibold text-muted-foreground md:flex">
             {NAV_LINKS.map((link) => (
               <Link
