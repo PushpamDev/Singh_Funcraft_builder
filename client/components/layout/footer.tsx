@@ -45,7 +45,7 @@ export const Footer = () => {
               Singh Furncraft
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Build Your Dream Place. With over 25 years of experience, we 
+              Build Your Dream Place. With over 21 years of experience, we 
               deliver turnkey interior solutions with precision and quality.
             </p>
             {/* TODO: Add Social Media Icons Here if you have them */}

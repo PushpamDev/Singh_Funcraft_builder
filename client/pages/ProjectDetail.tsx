@@ -165,33 +165,7 @@ export default function ProjectDetail() {
           </div>
         </section>
 
-        {/* --- 5. NEW: Build Process --- */}
-        <section className="container mx-auto px-4">
-          <motion.h2 
-            className="text-center font-display text-4xl text-foreground mb-12"
-            variants={fromBottom}
-            initial="initial"
-            whileInView="inView"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={animationTransition}
-          >
-            Our Process
-          </motion.h2>
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial="initial"
-            whileInView="inView"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ staggerChildren: 0.1 }}
-          >
-            {project.processImages.map((img) => (
-              <motion.div key={img.title} variants={fromBottom}>
-                <ProcessCard title={img.title} src={img.src} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </section>
-
+        
         {/* --- 6. Gallery Grid --- */}
         {galleryImages.length > 0 && (
           <section className="container mx-auto px-4">

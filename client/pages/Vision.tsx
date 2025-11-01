@@ -8,28 +8,28 @@ const visionVideos = [
   {
     title: "From Vision to Reality",
     description: "Our process begins with your vision. We leverage cutting-edge tools and decades of expertise to translate abstract ideas into tangible, breathtaking realities. This is where the blueprint meets the build.",
-    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SIGNFURNCRAFT_TRANSITION.mp4"
+    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGHFURNCRAFT5.mp4"
   },
   {
     // --- THIS IS THE FIX ---
     title: "Digital Prototyping & VR",
     description: "We bridge the gap between imagination and reality. Our team creates high-fidelity 3D models and photorealistic renders, allowing clients to virtually walk through their space before construction begins. This digital prototyping process ensures every detail is perfect.",
-    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGH FURNCRAFT_AI_GEN.mp4"
+    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGHFURNCRAFT1.mp4"
   },
   {
     title: "Crafted From Scratch",
     description: "True quality is built, not bought. From bespoke joinery to complex architectural elements, our in-house teams craft every detail from scratch, ensuring a level of finish that is unmatched.",
-    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGH FURNCRAFT_SCRATCH.mp4"
+    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGHFURNCRAFT2.mp4"
   },
   {
     title: "Precision in Every Detail",
     description: "A look at the speed, efficiency, and flawless execution that defines our on-site management. We believe that luxury is found in the precision of the details and the smoothness of the process.",
-    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGH FURNCRAFT_SNAP VIDEO.mp4"
+    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGHFURNCRAFT3.mp4"
   },
   {
     title: "Architectural Excellence",
     description: "We don't just decorate spaces; we build them. Our expertise extends to complex structural and architectural features, merging bespoke design with uncompromising engineering and safety.",
-    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGHFURNCRAFT_STAIRS.mp4"
+    videoSrc: "/Singh_FurnCraft_Portfolio/VISION VIDEOs/SINGHFURNCRAFT4.mp4"
   }
 ];
 

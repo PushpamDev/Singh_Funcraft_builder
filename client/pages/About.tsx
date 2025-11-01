@@ -49,7 +49,7 @@ const isoCerts = [
 ];
 
 const whyChooseUsList = [
-  "25+ Years of Proven Expertise",
+  "21+ Years of Proven Expertise",
   "End-to-End Turnkey Solutions",
   "PAN India Project Execution",
   "ISO Certified & MSME Registered",
@@ -63,7 +63,7 @@ const About = () => (
   <>
     <Head>
       <title>About Us - Singh FurnCraft</title>
-      <meta name="description" content="With over 25 years of experience, Singh Furncraft is a trusted name in the interior turnkey and contracting industry." />
+      <meta name="description" content="With over 21 years of experience, Singh Furncraft is a trusted name in the interior turnkey and contracting industry." />
     </Head>
 
     <div className="space-y-24 md:space-y-32 py-16 overflow-x-hidden">
@@ -83,7 +83,7 @@ const About = () => (
             Build Your Dream Place
           </h1>
           <p className="mt-6 text-lg max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-            With over 25 years of experience, Singh Furncraft Pvt. Ltd. is a trusted name in the interior turnkey and contracting industry, shaping premium spaces across India through quality craftsmanship, innovative design, and flawless execution.
+            With over 21 years of experience, Singh Furncraft Pvt. Ltd. is a trusted name in the interior turnkey and contracting industry, shaping premium spaces across India through quality craftsmanship, innovative design, and flawless execution.
           </p>
         </div>
       </motion.section>

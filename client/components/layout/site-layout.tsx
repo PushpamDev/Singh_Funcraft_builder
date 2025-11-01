@@ -27,7 +27,9 @@ const MobileMenu = ({
 }) => (
   <div
     className={cn(
-      "fixed inset-0 z-40 bg-background/90 backdrop-blur-md transition-opacity duration-200",
+      // --- THIS IS THE FIX for the mobile menu ---
+      // Removed bg-background/90 and backdrop-blur-md, added solid bg-background
+      "fixed inset-0 z-40 bg-background transition-opacity duration-200",
       isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
     )}
   >
@@ -79,7 +81,9 @@ export const SiteLayout = ({ children }: PropsWithChildren) => {
       
       {isHomepage ? <VideoBackground /> : <WatermarkAnimation />}
       
-      <header className="sticky top-0 z-30 backdrop-blur-xl">
+      {/* --- THIS IS THE FIX for the main header --- */}
+      {/* Removed backdrop-blur-xl, added bg-background and a bottom border */}
+      <header className="sticky top-0 z-30 bg-background border-b border-border/60">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-6 py-6">
           <Link to="/" className="relative flex items-center gap-4">
             <img src="/favicon-32x32.png" alt="Singh FurnCraft" className="h-8 w-auto" />

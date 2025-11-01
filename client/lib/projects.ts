@@ -12,10 +12,6 @@ export interface Project {
   client: string;
   challenge: string;
   solution: string;
-  processImages: {
-    title: string;
-    src: string;
-  }[];
 }
 
 // Helper array for our filter buttons
@@ -30,15 +26,29 @@ export const projectCategories = [
 ];
 
 // --- FALLBACK DATA FOR PROJECTS WITHOUT A CASE STUDY ---
-const defaultProcessImages = [
-  { title: "01. Design & Visualization", src: "https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-  { title: "02. Build-out & Construction", src: "https://images.pexels.com/photos/157811/pexels-photo-157811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-  { title: "03. Fit-out & Handover", src: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-];
 const defaultChallenge = "The client required a transformative interior solution that balanced modern aesthetics with functional requirements, all delivered on a strict timeline.";
 const defaultSolution = "Our team executed a full-service turnkey plan, managing every detail from initial 3D visualization to final fit-outs. We delivered a space that exceeded expectations, perfectly aligning with the client's brand and operational needs.";
 
 export const projects: Project[] = [
+  {
+    slug: "vanijya-bhawan",
+    name: "Vanijya Bhawan",
+    category: "Government",
+    location: "Akbar Road, New Delhi",
+    area: "1,27,000 sq.ft.",
+    type: "Government Building",
+    description: "Large-scale government building interior — administrative offices, conference rooms, and public areas.",
+    images: [
+      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image.png",
+      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (2).png",
+      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (3).png",
+      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (4).png",
+      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (5).png",
+    ],
+    client: "Ministry of Commerce",
+    challenge: defaultChallenge,
+    solution: defaultSolution,
+  },
   {
     slug: "aai-jorbagh",
     name: "Office Chambers of Minister of Civil Aviation, AAI",
@@ -60,7 +70,6 @@ export const projects: Project[] = [
     client: "Airports Authority of India (AAI)",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "auditorium-amrita-vidyalayam",
@@ -77,12 +86,11 @@ export const projects: Project[] = [
     client: "Amrita Vidyalayam",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "banquet-hall",
     name: "Banquet Hall & Reception",
-    category: "Hospitality",
+    category: "Public Space",
     location: "Faridabad",
     area: "6,000 sq.ft.",
     type: "Banquet/Events",
@@ -95,9 +103,9 @@ export const projects: Project[] = [
     client: "Delite Hotel Pvt. Ltd.",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
+  
     slug: "convention-hall-dining-area",
     name: "Convention Hall with Dining Area",
     category: "Public Space",
@@ -113,26 +121,24 @@ export const projects: Project[] = [
     client: "Public Space",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
-  {
-    slug: "delite-grand-hotel",
-    name: "Delite Grand Hotel",
-    category: "Hospitality",
-    location: "Neelam Bata Road, Faridabad",
-    area: "55,000 sq.ft.",
-    type: "Hospitality Interior",
-    description: "Full-scale hotel project including suites, banquet hall, restaurant, and reception design.",
-    images: [
-        "/Singh_FurnCraft_Portfolio/DELITE GRAND HOTEL/Delite 1.png",
-        "/Singh_FurnCraft_Portfolio/DELITE GRAND HOTEL/DGH2.png",
-        "/Singh_FurnCraft_Portfolio/DELITE GRAND HOTEL/DGH3.png"
-    ],
-    client: "Delite Hotel Pvt. Ltd.",
-    challenge: defaultChallenge,
-    solution: defaultSolution,
-    processImages: defaultProcessImages,
-  },
+  // {
+  //   slug: "delite-grand-hotel",
+  //   name: "Delite Grand Hotel",
+  //   category: "Hospitality",
+  //   location: "Neelam Bata Road, Faridabad",
+  //   area: "55,000 sq.ft.",
+  //   type: "Hospitality Interior",
+  //   description: "Full-scale hotel project including suites, banquet hall, restaurant, and reception design.",
+  //   images: [
+  //       "/Singh_FurnCraft_Portfolio/DELITE GRAND HOTEL/Delite 1.png",
+  //       "/Singh_FurnCraft_Portfolio/DELITE GRAND HOTEL/DGH2.png",
+  //       "/Singh_FurnCraft_Portfolio/DELITE GRAND HOTEL/DGH3.png"
+  //   ],
+  //   client: "Delite Hotel Pvt. Ltd.",
+  //   challenge: defaultChallenge,
+  //   solution: defaultSolution,
+  // },
   {
     slug: "polyplex-hydro-office",
     name: "Hydro Office at Polyplex Corporation Ltd.",
@@ -151,7 +157,6 @@ export const projects: Project[] = [
     client: "Polyplex Corporation Ltd.",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "iilm-auditorium",
@@ -169,7 +174,6 @@ export const projects: Project[] = [
     client: "IILM University",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "imfa",
@@ -189,7 +193,6 @@ export const projects: Project[] = [
     client: "IMFA",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "innovacer",
@@ -207,7 +210,6 @@ export const projects: Project[] = [
     client: "Innovaccer",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "kaushal-bhawan",
@@ -227,20 +229,6 @@ export const projects: Project[] = [
     client: "Ministry of Skill Development and Entrepreneurship",
     challenge: "The client required a large-scale government building that was not only functional for a high volume of staff but also stood as an architectural landmark. The brief demanded a blend of modern security, sustainable (LEED-compliant) features, and a design that reflects India's heritage.",
     solution: "Our team delivered a complete turnkey solution, engineering a state-of-the-art facility. We integrated smart infrastructure, energy-efficient MEP systems, and sourced sustainable materials. The final design blends traditional Indian motifs with a clean, modern aesthetic, creating a space that is both dignified and highly productive.",
-    processImages: [
-      {
-        title: "01. Design & Visualization",
-        src: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Placeholder: Replace with your blueprint/render
-      },
-      {
-        title: "02. Civil & Build-out",
-        src: "https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Placeholder: Replace with your construction photo
-      },
-      {
-        title: "03. Fit-out & Handover",
-        src: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Placeholder: Replace with your final photo
-      }
-    ]
   },
   {
     slug: "mecon-limited",
@@ -257,7 +245,6 @@ export const projects: Project[] = [
     client: "MECON Limited",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "nhit",
@@ -280,7 +267,6 @@ export const projects: Project[] = [
     client: "National Highways Infra Trust",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "nau-sena-bhawan-2",
@@ -299,12 +285,11 @@ export const projects: Project[] = [
     client: "Indian Navy",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "pizza-express",
     name: "Pizza Express (Vasant Kunj)",
-    category: "Retail",
+    category: "Hospitality",
     location: "Ambience Mall, Vasant Kunj, Delhi",
     area: "2,100 sq.ft.",
     type: "Restaurant",
@@ -318,12 +303,11 @@ export const projects: Project[] = [
     client: "Pizza Express",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "pizza-express-restaurant",
     name: "Pizza Express (Rajouri Garden)",
-    category: "Retail",
+    category: "Hospitality",
     location: "Vishal Cinema, Rajouri Garden, New Delhi",
     area: "2,200 sq.ft.",
     type: "Restaurant",
@@ -336,7 +320,6 @@ export const projects: Project[] = [
     client: "Pizza Express",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "polyplex",
@@ -354,7 +337,6 @@ export const projects: Project[] = [
     client: "Polyplex Corporation Ltd.",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "reliance-digital",
@@ -373,7 +355,6 @@ export const projects: Project[] = [
     client: "Reliance",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "reliance-digital-ameya-sapphire-mall",
@@ -390,7 +371,6 @@ export const projects: Project[] = [
     client: "Reliance",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "reliance-jewels",
@@ -408,7 +388,6 @@ export const projects: Project[] = [
     client: "Reliance",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "reliance-trends",
@@ -426,7 +405,6 @@ export const projects: Project[] = [
     client: "Reliance",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "reliance-trends-bhupinder-road",
@@ -442,7 +420,6 @@ export const projects: Project[] = [
     client: "Reliance",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "tata-cnoc",
@@ -460,12 +437,11 @@ export const projects: Project[] = [
     client: "TATA Communications",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "the-coffee-bean-tea-leaf",
     name: "The Coffee Bean & Tea Leaf",
-    category: "Retail",
+    category: "Hospitality",
     location: "Omaxe Complex, New Chandigarh",
     area: "1,550 sq.ft.",
     type: "Café Interior",
@@ -478,7 +454,6 @@ export const projects: Project[] = [
     client: "The Coffee Bean & Tea Leaf",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
   {
     slug: "times-now",
@@ -495,28 +470,8 @@ export const projects: Project[] = [
     client: "Times Now",
     challenge: defaultChallenge,
     solution: defaultSolution,
-    processImages: defaultProcessImages,
   },
-  {
-    slug: "vanijya-bhawan",
-    name: "Vanijya Bhawan",
-    category: "Government",
-    location: "Akbar Road, New Delhi",
-    area: "1,27,000 sq.ft.",
-    type: "Government Building",
-    description: "Large-scale government building interior — administrative offices, conference rooms, and public areas.",
-    images: [
-      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image.png",
-      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (2).png",
-      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (3).png",
-      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (4).png",
-      "/Singh_FurnCraft_Portfolio/VANIJYA BHAWAN/Pasted image (5).png",
-    ],
-    client: "Ministry of Commerce",
-    challenge: defaultChallenge,
-    solution: defaultSolution,
-    processImages: defaultProcessImages,
-  },
+  
 ];
 
 // Helper functions to get the data

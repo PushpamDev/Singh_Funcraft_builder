@@ -1,5 +1,5 @@
 const heroMetrics = [
-  { value: "25", label: "Years in business" },
+  { value: "21", label: "Years in business" },
   { value: "350+", label: "Projects delivered" },
   { value: "99+", label: "Satisfied clients" },
 ];

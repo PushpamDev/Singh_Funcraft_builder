@@ -261,7 +261,7 @@ const Services = () => (
             Let’s Build Your Dream Space Together
           </h2>
           <p className="mt-6 max-w-xl mx-auto text-lg leading-relaxed text-muted-foreground">
-            Our 25 years of expertise are at your service. Contact us today 
+            Our 21 years of expertise are at your service. Contact us today 
             to discuss your project requirements and get a free consultation.
           </p>
           <Link
