@@ -84,10 +84,9 @@ const LogoScroller = () => (
       {[...logos, ...logos].map((logo, index) => (
         <div 
           key={index} 
-          className="flex-shrink-0 w-36 h-24 flex items-center justify-center mx-6"
+          // Responsive logo size
+          className="flex-shrink-0 w-28 h-20 sm:w-36 sm:h-24 flex items-center justify-center mx-4 sm:mx-6"
         >
-          {/* --- THIS IS THE FIX --- */}
-          {/* Removed 'grayscale' and 'hover:grayscale-0' */}
           <img 
             src={logo.src} 
             alt={logo.alt} 
@@ -122,7 +121,8 @@ export const HeroSection = () => {
 
 
   return (
-    <section className="relative h-[600px] md:h-[700px] lg:h-[800px] w-full overflow-hidden rounded-[2.75rem] border border-border/60 shadow-soft bg-background">
+    // Main section has responsive height
+    <section className="relative h-[650px] md:h-[700px] lg:h-[800px] w-full overflow-hidden rounded-[2.75rem] border border-border/60 shadow-soft bg-background">
       
       {/* Embla Slider Viewport */}
       <div className="overflow-hidden h-full" ref={emblaRef}>
@@ -143,8 +143,9 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Text Content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-8">
+      {/* --- THIS IS THE FIX --- */}
+      {/* Text Content: Changed justify-center to justify-start, added padding-top and padding-bottom */}
+      <div className="absolute inset-0 flex flex-col justify-start items-center text-center text-white p-6 sm:p-8 pt-20 sm:pt-32 pb-56 sm:pb-64 overflow-y-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -157,15 +158,16 @@ export const HeroSection = () => {
             <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.45em] text-white/90">
               {heroSlides[activeIndex].superTitle}
             </span>
-            <h1 className="mt-8 text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-7xl">
+            {/* Responsive text and margins */}
+            <h1 className="mt-6 text-4xl md:text-5xl lg:text-7xl font-semibold leading-[1.05]">
               {heroSlides[activeIndex].title}
             </h1>
-            <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white/80">
+            <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-white/80">
               {heroSlides[activeIndex].description}
             </p>
             <Link
               to="/contact"
-              className="mt-10 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-primary-foreground shadow-soft transition-transform duration-200 hover:-translate-y-0.5"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-primary-foreground shadow-soft transition-transform duration-200 hover:-translate-y-0.5"
             >
               Start Your Project
             </Link>
@@ -173,8 +175,8 @@ export const HeroSection = () => {
         </AnimatePresence>
       </div>
 
-      {/* Slider Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+      {/* Slider Dots: Positioned above the logo scroller area */}
+      <div className="absolute bottom-48 sm:bottom-52 left-1/2 -translate-x-1/2 flex gap-2">
         {heroSlides.map((_, index) => (
           <button
             key={index}
@@ -187,12 +189,12 @@ export const HeroSection = () => {
         ))}
       </div>
 
-      {/* Logo Scroller */}
-      <div className="absolute bottom-0 w-full bg-background/90 py-8">
-        <h3 className="text-center text-sm font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+      {/* Logo Scroller: Given a fixed height to prevent content collision */}
+      <div className="absolute bottom-0 w-full bg-background/90 py-6 h-44 sm:h-48 flex flex-col justify-center">
+        <h3 className="text-center text-xs sm:text-sm font-semibold uppercase tracking-[0.4em] text-muted-foreground">
           Trusted By
         </h3>
-        <div className="mt-8">
+        <div className="mt-4 sm:mt-6">
           <LogoScroller />
         </div>
       </div>

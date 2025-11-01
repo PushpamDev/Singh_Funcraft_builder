@@ -57,12 +57,18 @@ export const ServicesSection = () => {
   // ... (rest of file is unchanged)
   return (
     <section className="container mx-auto px-4">
-      <div className="max-w-xl">
-        <span className="text-xs uppercase tracking-[0.45em] text-muted-foreground">What We Do</span>
-        <h2 className="mt-4 font-display text-4xl leading-tight text-foreground md:text-5xl">
-          Our Core Capabilities
-        </h2>
+      {/* --- THIS IS THE FIX --- */}
+      {/* Wrapped the header in a styled, opaque card */}
+      <div className="rounded-[2.5rem] border border-border/60 bg-background p-8 shadow-card lg:p-14 mb-14">
+        <div className="max-w-xl">
+          <span className="text-xs uppercase tracking-[0.45em] text-muted-foreground">What We Do</span>
+          <h2 className="mt-4 font-display text-4xl leading-tight text-foreground md:text-5xl">
+            Our Core Capabilities
+          </h2>
+        </div>
       </div>
+      {/* --- END OF FIX --- */}
+
       <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {servicesData.map((service) => (
           <ServiceCard key={service.title} {...service} />
